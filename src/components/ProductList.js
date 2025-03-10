@@ -3,9 +3,9 @@ import { Card, Button, Container, Row, Col } from "react-bootstrap";
 import { CartContext } from "../context/CartContext";
 
 const products = [
-    { id: 1, name: "Laptop", price: 800, image: "/images/laptop.jpg" },
-    { id: 2, name: "Phone", price: 500, image: "/images/phone.jpg" },
-    { id: 3, name: "Headphone", price: 100, image: "/images/headphones.jpg" },
+    { id: 1, name: "Laptop", price: 71990, image: "/images/laptop.jpg" },
+    { id: 2, name: "Phone", price: 99389, image: "/images/phone.jpg" },
+    { id: 3, name: "Headphone", price: 1299, image: "/images/headphones.jpg" },
 ];
 
 function ProductList() {
@@ -20,7 +20,7 @@ function ProductList() {
                             <Card.Img variant="top" src={product.image} style={{ height: "200px", objectFit: "contain" }} />
                             <Card.Body className="d-flex flex-column">
                                 <Card.Title>{product.name}</Card.Title>
-                                <Card.Text className="flex-grow-1">Price: ${product.price}</Card.Text>
+                                <Card.Text className="flex-grow-1">Price: Rs.{product.price}</Card.Text>
                                 <Button variant="primary" onClick={() => addToCart(product)}>
                                     Add to Cart 🛒
                                 </Button>

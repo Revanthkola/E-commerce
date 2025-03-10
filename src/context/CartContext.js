@@ -12,9 +12,16 @@ export const CartProvider = ({ children }) => {
         setCart((prevCart) => [...prevCart, product]);
     };
 
-    // Remove item from cart
+    // Remove only one instance of the item from cart
     const removeFromCart = (id) => {
-        setCart((prevCart) => prevCart.filter((item) => item.id !== id));
+        setCart((prevCart) => {
+            const index = prevCart.findIndex((item) => item.id === id);
+            if (index === -1) return prevCart;
+
+            const newCart = [...prevCart];
+            newCart.splice(index, 1); // ✅ Removes only one instance
+            return newCart;
+        });
     };
 
     return (
