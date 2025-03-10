@@ -3,10 +3,11 @@ import { Card, Button, Container, Row, Col } from "react-bootstrap";
 import { CartContext } from "../context/CartContext";
 
 const products = [
-    { id: 1, name: "Laptop", price: 71990, image: "/images/laptop.jpg" },
-    { id: 2, name: "Phone", price: 99389, image: "/images/phone.jpg" },
-    { id: 3, name: "Headphone", price: 1299, image: "/images/headphones.jpg" },
+    { id: 1, name: "Laptop", price: 71990, image: `${process.env.PUBLIC_URL}/images/laptop.jpg` },
+    { id: 2, name: "Phone", price: 99920, image: `${process.env.PUBLIC_URL}/images/phone.jpg` },
+    { id: 3, name: "Headphone", price: 1799, image: `${process.env.PUBLIC_URL}/images/headphones.jpg` },
 ];
+
 
 function ProductList() {
     const { addToCart } = useContext(CartContext);
