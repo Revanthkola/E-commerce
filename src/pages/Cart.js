@@ -23,7 +23,7 @@ function Cart() {
                         {cart.map((item) => (
                             <ListGroup.Item key={item.id} className="d-flex justify-content-between">
                                 <div>
-                                    <strong>{item.name}</strong> - ${item.price}
+                                    <strong>{item.name}</strong> - Rs.{item.price}
                                 </div>
                                 <Button variant="danger" size="sm" onClick={() => removeFromCart(item.id)}>
                                     Remove
